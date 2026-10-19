@@ -1,0 +1,40 @@
+# ===== Build artifacts =====
+target/
+build/
+out/
+bin/
+
+# ===== Logs =====
+logs/
+log/
+*.log
+
+# ===== IDE =====
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Secrets =====
+*.pem
+*.key
+*.crt
+*.p12
+*.der
+
+# ===== Test =====
+
+# ===== Generated =====
+generated/
+
+# ===== Temporary =====
+*.tmp
+*.swp
+*.bak
+
+# ===== Notes =====
+*.txt
