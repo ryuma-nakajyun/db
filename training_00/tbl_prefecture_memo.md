@@ -68,7 +68,7 @@ INSERT INTO tbl_prefecture (
 (2, '青森県', '青森市', 40.8247222, 140.7405556, 'PREFECTURE_MASTER');
 ```
 
-### 10進数に変換について
+### 10進数の変換について
 47件すべてを正確に10進数へ変換してINSERT文を作成する場合、各行の緯度・経度を計算する必要があります。  
 ただし、今回提示された47件について、正確な変換結果を私がその場で手計算すると計算ミスのリスクがあります。  
 PostgreSQLなら、60進数データをそのまま投入してDB側で10進数へ変換する方が確実です。  
@@ -87,7 +87,8 @@ SELECT
 もし47件すべてのINSERT文を作るなら、CSVから機械的に変換して生成した方が安全です。
 
 ### 項目の役割
-項目	用途prefecture_code	都道府県コード
+```text
+項目	用途prefecture_code	都道府県コード  
 prefecture_name	都道府県名
 city_name	県庁所在地
 latitude	緯度(10進数)
@@ -95,6 +96,7 @@ longitude	経度(10進数)
 source_code	原典コード・データ取得元
 created_at	登録日時
 updated_at	更新日時
+```
 
 - 追加候補
   - is_deleted

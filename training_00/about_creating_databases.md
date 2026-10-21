@@ -49,5 +49,5 @@ SELECT current_database();
 ### memo
 ---
 - 省略コマンドの正式名称(関連記憶のためmust)
-- 省略コマンドの
+- DBA関連のコマンド
 - 
