@@ -18,6 +18,6 @@
 
 ## 開発環境
 - OS : Linux(Ubuntu 24.04 LTS)
-- TBD(おそらく、PostgreSQL)
+- PostgreSQL
 - バージョン管理 : Git / GitHub
 - 開発ツール : VS Code

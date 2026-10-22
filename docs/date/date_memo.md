@@ -36,6 +36,11 @@ timedatectl
 timedatectl status
 ```
 
+### 参考
+---
+- AI先生
+- 書籍たち
+
 ### memo
 ---
 - 

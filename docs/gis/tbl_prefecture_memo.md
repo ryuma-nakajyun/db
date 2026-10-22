@@ -1,4 +1,3 @@
-
 # 都道府県マスタ構築
 ###　COPYコマンドでcsvでデータ投入 
 - create文
@@ -68,9 +67,9 @@ INSERT INTO tbl_prefecture (
 (2, '青森県', '青森市', 40.8247222, 140.7405556, 'PREFECTURE_MASTER');
 ```
 
-### 10進数の変換について
-47件すべてを正確に10進数へ変換してINSERT文を作成する場合、各行の緯度・経度を計算する必要があります。  
-ただし、今回提示された47件について、正確な変換結果を私がその場で手計算すると計算ミスのリスクがあります。  
+### 10進数の変換
+47件すべてを正確に10進数へ変換してINSERT文を作成する場合、  
+各県の緯度・経度を計算する必要があります。  
 PostgreSQLなら、60進数データをそのまま投入してDB側で10進数へ変換する方が確実です。  
 
 例えば、札幌市なら、
@@ -79,7 +78,7 @@ SELECT
     43 + 3.0/60 + 52.0/3600 AS latitude,
     141 + 20.0/60 + 49.0/3600 AS longitude;
 ```
-- 結果
+- 結果  
 ```text
 43.0644444
 141.3469444
@@ -88,7 +87,8 @@ SELECT
 
 ### 項目の役割
 ```text
-項目	用途prefecture_code	都道府県コード  
+項目	用途
+prefecture_code	都道府県コード  
 prefecture_name	都道府県名
 city_name	県庁所在地
 latitude	緯度(10進数)
@@ -110,21 +110,12 @@ updated_by
 source_code  
 「総務省」「国土地理院」などの元データ識別  
 
-ただし、学習用リポジトリなら、
-```text
-prefecture_code
-prefecture_name
-city_name
-latitude
-longitude
-source_code
-created_at
-updated_at
-```
-くらいが最小かつ実務寄りで、ちょうど良いバランスだと思います。  
-is_deleted や created_by は次の学習テーマとして追加するのがおすすめです。  
+### 参考
+--- 
+- AI先生
 
 ### memo
+---
 - 改行しないと実行されない？？？
 ```sql
 SELECT *
