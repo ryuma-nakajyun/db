@@ -116,7 +116,7 @@ source_code
 
 ### memo
 ---
-- 改行しないと実行されない？？？
+- Q 改行しないと実行されない？？？
 ```sql
 SELECT *
 FROM tbl_prefecture;
